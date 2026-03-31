@@ -559,3 +559,51 @@ button {
     flex-direction: column;
   }
 }
+/* ===== V3.1 IMPROVEMENTS ===== */
+
+.hero-copy h1 {
+  font-size: clamp(42px, 6vw, 84px);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 0.95;
+  max-width: 820px;
+}
+
+.hero-copy p {
+  max-width: 520px;
+  font-size: 18px;
+  opacity: 0.85;
+}
+
+.visual-core {
+  position: absolute;
+  inset: 100px 90px 140px 90px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 40% 40%, #ffffff, #7c5cff 40%, #4de2d1 65%, transparent 75%);
+  filter: blur(8px);
+}
+
+.visual-layer {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(220, 231, 255, 0.08);
+}
+
+.visual-layer-1 { inset: 60px; }
+.visual-layer-2 { inset: 30px; }
+.visual-layer-3 { inset: 0; }
+
+.feature-card {
+  border-radius: 24px;
+  padding: 28px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+  border: 1px solid rgba(220,231,255,0.08);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(124, 92, 255, 0.4);
+  box-shadow: 0 20px 40px rgba(124,92,255,0.15);
+}
