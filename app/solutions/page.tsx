@@ -7,27 +7,27 @@ const solutions = [
 
 export default function SolutionsPage() {
   return (
-    <main className="page-shell">
-      <div className="page-hero-shell">
-        <div className="about-label">Solutions</div>
+    <main className="inner-page shell">
+      <section className="inner-hero">
+        <span className="eyebrow">Solutions</span>
         <h1>Security solutions that stay practical.</h1>
         <p>
           We focus on the areas where modern teams most often carry hidden
           risk—applications, cloud, infrastructure, and process gaps.
         </p>
-      </div>
+      </section>
 
-      <div className="page-grid">
+      <section className="inner-grid">
         {solutions.map((solution) => (
-          <div className="page-card" key={solution}>
+          <article className="inner-card" key={solution}>
             <h3>{solution}</h3>
             <p>
               Designed to reduce exposure early and help teams take the next
-              right step with confidence.
+              right step with more confidence.
             </p>
-          </div>
+          </article>
         ))}
-      </div>
+      </section>
     </main>
   );
 }

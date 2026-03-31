@@ -7,27 +7,27 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <main className="page-shell">
-      <div className="page-hero-shell">
-        <div className="about-label">Services</div>
+    <main className="inner-page shell">
+      <section className="inner-hero">
+        <span className="eyebrow">Services</span>
         <h1>Focused services for modern risk.</h1>
         <p>
           We help teams find exposure early, prioritize what matters, and move
-          toward stronger defenses with less noise.
+          toward stronger defenses without excess complexity.
         </p>
-      </div>
+      </section>
 
-      <div className="page-grid">
+      <section className="inner-grid">
         {services.map((service) => (
-          <div className="page-card" key={service}>
+          <article className="inner-card" key={service}>
             <h3>{service}</h3>
             <p>
-              Practical, clear, and built to give you real security value—not
-              just a report.
+              Practical, direct, and designed to produce real security value—not
+              just another report.
             </p>
-          </div>
+          </article>
         ))}
-      </div>
+      </section>
     </main>
   );
 }

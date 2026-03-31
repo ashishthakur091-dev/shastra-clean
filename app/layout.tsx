@@ -14,31 +14,36 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <nav className="navbar">
-          <Link href="/" className="logo">
-            Shastra
-          </Link>
+        <header className="site-header">
+          <nav className="navbar shell">
+            <Link href="/" className="brand">
+              <span className="brand-mark" />
+              <span>Shastra</span>
+            </Link>
 
-          <div className="nav-links">
-            <Link href="/about">About</Link>
-            <Link href="/services">Services</Link>
-            <Link href="/solutions">Solutions</Link>
-            <Link href="/contact">Contact</Link>
-          </div>
+            <div className="nav-links">
+              <Link href="/about">About</Link>
+              <Link href="/services">Services</Link>
+              <Link href="/solutions">Solutions</Link>
+              <Link href="/industries">Industries</Link>
+              <Link href="/contact">Contact</Link>
+            </div>
 
-          <Link href="/contact" className="nav-cta">
-            Enquire
-          </Link>
-        </nav>
+            <Link href="/contact" className="nav-cta">
+              Enquire
+            </Link>
+          </nav>
+        </header>
 
         {children}
 
-        <footer className="footer">
-          <div className="footer-inner">
+        <footer className="site-footer">
+          <div className="shell footer-grid">
             <div>
               <div className="footer-brand">Shastra Cyber Solutions</div>
               <p className="footer-copy">
-                Clean, modern cybersecurity for teams that want clarity before complexity.
+                Premium cybersecurity for teams that want clarity, speed, and
+                stronger decision-making.
               </p>
             </div>
 
@@ -46,6 +51,7 @@ export default function RootLayout({
               <Link href="/about">About</Link>
               <Link href="/services">Services</Link>
               <Link href="/solutions">Solutions</Link>
+              <Link href="/industries">Industries</Link>
               <Link href="/contact">Contact</Link>
             </div>
           </div>

@@ -1,26 +1,26 @@
 export default function ContactPage() {
   return (
-    <main className="page-shell">
-      <div className="page-hero-shell">
-        <div className="about-label">Contact</div>
+    <main className="inner-page shell">
+      <section className="inner-hero">
+        <span className="eyebrow">Contact</span>
         <h1>Talk to Shastra.</h1>
         <p>
           Start with a quick conversation. We’ll help you understand where the
           biggest security gaps may be.
         </p>
-      </div>
+      </section>
 
-      <div className="contact-panel">
-        <div className="page-card">
+      <section className="inner-grid">
+        <article className="inner-card">
           <h3>Email</h3>
           <p>ashishthakur091@gmail.com</p>
-        </div>
+        </article>
 
-        <div className="page-card">
+        <article className="inner-card">
           <h3>Response</h3>
           <p>Typically within 24 hours.</p>
-        </div>
-      </div>
+        </article>
+      </section>
     </main>
   );
 }
