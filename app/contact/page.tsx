@@ -1,32 +1,25 @@
-const solutions = [
-  "Web Application Security",
-  "Cloud Hardening",
-  "Infrastructure Reviews",
-  "Threat-Led Testing",
-];
-
-export default function SolutionsPage() {
+export default function ContactPage() {
   return (
     <main className="page-shell">
       <div className="page-hero-shell">
-        <div className="about-label">Solutions</div>
-        <h1>Security solutions that stay practical.</h1>
+        <div className="about-label">Contact</div>
+        <h1>Talk to Shastra.</h1>
         <p>
-          We focus on the areas where modern teams most often carry hidden
-          risk—applications, cloud, infrastructure, and process gaps.
+          Start with a quick conversation. We’ll help you understand where the
+          biggest security gaps may be.
         </p>
       </div>
 
-      <div className="page-grid">
-        {solutions.map((solution) => (
-          <div className="page-card" key={solution}>
-            <h3>{solution}</h3>
-            <p>
-              Designed to reduce exposure early and help teams take the next
-              right step with confidence.
-            </p>
-          </div>
-        ))}
+      <div className="contact-panel">
+        <div className="page-card">
+          <h3>Email</h3>
+          <p>ashishthakur091@gmail.com</p>
+        </div>
+
+        <div className="page-card">
+          <h3>Response</h3>
+          <p>Typically within 24 hours.</p>
+        </div>
       </div>
     </main>
   );
