@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const cardItems = [
   {
@@ -15,6 +16,13 @@ const cardItems = [
     title: "Threat Simulation",
     text: "Test how your defenses respond under pressure.",
   },
+];
+
+const trustItems = [
+  "Fast security reviews",
+  "Clear remediation guidance",
+  "Modern infrastructure focus",
+  "Built for growing teams",
 ];
 
 export default function Home() {
@@ -57,13 +65,25 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.25 }}
           >
-            <button className="primary">Get Assessment</button>
-            <button className="secondary">View Services</button>
+            <Link href="/contact" className="primary">
+              Get Assessment
+            </Link>
+            <Link href="/services" className="secondary">
+              View Services
+            </Link>
           </motion.div>
         </motion.div>
       </section>
 
-      <section className="cards" id="services">
+      <section className="trust-strip">
+        {trustItems.map((item) => (
+          <div key={item} className="trust-item">
+            {item}
+          </div>
+        ))}
+      </section>
+
+      <section className="cards">
         {cardItems.map((item, index) => (
           <motion.div
             key={item.title}
@@ -80,7 +100,7 @@ export default function Home() {
         ))}
       </section>
 
-      <section className="about-strip" id="about">
+      <section className="about-strip">
         <div className="about-panel">
           <div className="about-label">Why Shastra</div>
           <h2>Minimal noise. Maximum clarity.</h2>
@@ -91,7 +111,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="solutions-preview" id="solutions">
+      <section className="solutions-preview">
         <div className="solution-box">
           <span>Web Security</span>
         </div>
@@ -106,7 +126,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="final-cta" id="contact">
+      <section className="final-cta">
         <div className="final-shell">
           <div className="about-label">Start Now</div>
           <h2>Get a security assessment in 24 hours</h2>
@@ -114,7 +134,9 @@ export default function Home() {
             Clear findings. Practical actions. No bloated reports and no wasted
             time.
           </p>
-          <button className="primary">Contact Us</button>
+          <Link href="/contact" className="primary">
+            Contact Us
+          </Link>
         </div>
       </section>
     </main>

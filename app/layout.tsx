@@ -1,8 +1,9 @@
 import "./globals.css";
+import Link from "next/link";
 
 export const metadata = {
   title: "Shastra Cyber Solutions",
-  description: "Minimal premium cybersecurity website",
+  description: "Premium cybersecurity website",
 };
 
 export default function RootLayout({
@@ -14,19 +15,41 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <nav className="navbar">
-          <div className="logo">Shastra</div>
+          <Link href="/" className="logo">
+            Shastra
+          </Link>
 
           <div className="nav-links">
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#solutions">Solutions</a>
-            <a href="#contact">Contact</a>
+            <Link href="/about">About</Link>
+            <Link href="/services">Services</Link>
+            <Link href="/solutions">Solutions</Link>
+            <Link href="/contact">Contact</Link>
           </div>
 
-          <button className="nav-cta">Enquire</button>
+          <Link href="/contact" className="nav-cta">
+            Enquire
+          </Link>
         </nav>
 
         {children}
+
+        <footer className="footer">
+          <div className="footer-inner">
+            <div>
+              <div className="footer-brand">Shastra Cyber Solutions</div>
+              <p className="footer-copy">
+                Clean, modern cybersecurity for teams that want clarity before complexity.
+              </p>
+            </div>
+
+            <div className="footer-links">
+              <Link href="/about">About</Link>
+              <Link href="/services">Services</Link>
+              <Link href="/solutions">Solutions</Link>
+              <Link href="/contact">Contact</Link>
+            </div>
+          </div>
+        </footer>
       </body>
     </html>
   );
